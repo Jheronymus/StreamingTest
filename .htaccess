@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} "android|blackberry|googlebot-mobile|iemobile|iphone|ipod|opera mobile|palmos|webos" [NC]
+RewriteRule ^$ http://stream.propus.nl/benelux/mobile.html [L,R=302]
+RewriteCond %{HTTP_USER_AGENT} "ipad" [NC]
+RewriteRule ^$ http://stream.propus.nl/benelux/tablet.html [L,R=302]
+</IfModule>

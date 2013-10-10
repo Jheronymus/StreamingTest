@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="image_src" href="http://stream.propus.nl/benelux/images/logos/FLL10wow.png" />
+<meta property="og:image" content="http://stream.propus.nl/benelux/images/logos/FLL10wow.png" />
+<meta property="og:url" content="http://stream.propus.nl/benelux/" />
+<meta property="og:title" content="Live Stream FLL Benelux Finale 2013" />
+<meta property="og:description" content="Op 2 februari 2013 nemen 43 teams het tegen elkaar op tijdens deze zinderende FLL finale. Volg de FLL Benelux Finale live vanuit Groningen!" />
+<title>FLL Benelux Finale - 2013 [Tablet]</title>
+<!-- styles needed by Social Wall -->
+<link rel="stylesheet" type="text/css" href="inc/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/dcsns_wall.css" media="all" />
+<!-- the Social Wall scripts -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="inc/js/jquery.plugins.js"></script>
+<script type="text/javascript" src="inc/js/jquery.site.js"></script>
+<script type="text/javascript" src="js/jquery.social.stream.wall.1.2.js"></script>
+<script type="text/javascript" src="js/jquery.social.stream.1.4.3.min.js"></script>
+
+ <script type="text/javascript" src="js/jquery.jCounter-0.1.4.js"></script>
+
+<!-- Parameter for Social wall -->
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	$('#social-stream').dcSocialStream({
+		feeds: {
+			twitter: {
+				id: 'fllbenelux,#fllbnl',
+				thumb: true,
+				images: 'small'
+			},
+			facebook: {
+				id: '121516737994223'
+			},
+			youtube: {
+				id: 'Techniekpromotie'
+			}
+		},
+		rotate: {
+			delay: 0
+		},
+		twitterId: 'fllbenelux',
+		control: false,
+		filter: false,
+		wall: true,
+		cache: false,
+		max: 'limit',
+		limit: 10,
+		iconPath: 'images/dcsns-dark/',
+		imagePath: 'images/dcsns-dark/',
+		height: 500
+	});			 
+});
+</script>
+<script> 
+var refresh_rate = 60000
+var auto_refresh = setInterval(
+function(){
+$('#counter').removeData();
+$('#counter').empty();
+$('#counter').html(60);
+
+$('#social-stream').removeData();
+$('#social-stream').empty();
+$('#social-stream').fadeOut('fast').load(
+	$('#social-stream').dcSocialStream({
+		feeds: {
+			twitter: {
+				id: 'fllbenelux,#fllbnl,@fllbenelux',
+				thumb: true,
+				images: 'small'
+			},
+			facebook: {
+				id: '121516737994223'
+			},
+			youtube: {
+				id: 'Techniekpromotie'
+			}
+		},
+		rotate: {
+			delay: 0
+		},
+		twitterId: 'fllbenelux',
+		control: false,
+		filter: false,
+		wall: true,
+		cache: false,
+		max: 'limit',
+		limit: 10,
+		iconPath: 'images/dcsns-dark/',
+		imagePath: 'images/dcsns-dark/',
+		height: 500
+	})
+).fadeIn('fast');
+}, refresh_rate);
+</script>
+
+<!--Counter -->
+<script>
+var auto_refresh = setInterval(
+function(){
+$('#counter').html($('#counter').text()-1)
+},1000);
+</script>
+
+ 
+<!-- Local mods for Styles -->
+<style>
+h3 {margin-left: 10px}
+#player {background-color:#fff; margin-left:10px; width:660px; height: 417px; -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6); box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);}
+#logos {left:10px; top: 465px; width:660px; height:85px; margin-left:10px; margin-top:5px; background-color:#fff; -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6); box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);}
+#wall {margin-left: 675px; width:250px; height:507px; overflow-y:scroll; overflow-x:hidden; background-color:#fff; -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6); box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);}
+</style>
+
+		
+
+
+</head>
+<body>
+<br />
+<div id="left" style="float:left;">
+<div id="counter_lead" style="font-size: x-small; display:inline; position:absolute; left:910px; margin-top:510px; z-index:10;"><div id="counter" style="display:inline;">60</div>s</div>	
+<div id="player">
+	
+		<img src="images/logos/propus_overlay.png" width="151" height="45" style="position: absolute; margin-top: 5px; margin-left: 10px; z-index: 5;" />
+  <video style="width: 650px; height: 407px; position: relative; margin-left:5px; margin-top:5px; z-index: 1;" src="http://media-services.propus.nl/fllbnl/Live%20stream%20archive%202-2-2013%2009.46.ism/manifest(format=m3u8-aapl).m3u8" poster="MyPosterFrame.png" autoplay="true" controls="true" >Live</video>
+	
+</div>
+<div id="logos" >
+<img src="images/logos/FLL10wow.png" style="height:75px; margin-left:5px; margin-top:5px; float:left">
+<img src="images/logos/logo_10jaar_cmyk_programmavan_zwart.png" style="height:75px; float:left; margin-left:40px; margin-top:5px;">
+<img src="images/logos/Logo_HACampus_RGB.png" style="height:75px; float:right; margin-top:5px; margin-right:5px;">
+</div>
+
+<center><a href="index.html">Andere versie</a> | <a target="_blank" href="http://uitslagen.first-brabant.nl">Robot scores</a> | De webstream en social media worden ongefiltered aangeboden.</center>
+</div>
+<div id="wall" >
+
+	<div id="social-stream" style="margin-left:5px; margin-top:5px; "></div>
+
+</div>
+
+<div class="clear"></div>
+
+</body>
+</html>
