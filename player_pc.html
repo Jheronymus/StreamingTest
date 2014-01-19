@@ -7,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <!-- styles needed by Social Wall -->
         <link rel="stylesheet" type="text/css" href="inc/layout.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="css/dcsns_wall.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/dcsns_wall.css?v=1.5.4" media="all" />
 
         <link rel="image_src" href="http://stream.propus.nl/benelux/images/logos/ffl_wow_web.png" />        
         <!--
@@ -19,14 +19,15 @@
         
         <!-- the Social Wall scripts -->
         <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="inc/js/jquery.plugins.js"></script>
-        <script type="text/javascript" src="inc/js/jquery.site.js"></script>
-        <script type="text/javascript" src="js/jquery.social.stream.wall.1.2.js"></script>
-        <script type="text/javascript" src="js/jquery.social.stream.1.4.3.min.js"></script>
+        <!--<script type="text/javascript" src="inc/js/jquery.plugins.js"></script>
+        <script type="text/javascript" src="inc/js/jquery.site.js"></script>-->
+        <script type="text/javascript" src="js/jquery.social.stream.wall.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.social.stream.1.5.4.min.js"></script>
+        <script type="text/javascript" src="js/libs_social.js"></script>
 
-        <script type="text/javascript" src="js/jquery.jCounter-0.1.4.js"></script>
+        <!--<script type="text/javascript" src="js/jquery.jCounter-0.1.4.js"></script>-->
 
-        <!-- Redirect if iPad -->
+        <!-- Redirect if iPad, needs different video player -->
         <script type="text/javascript">
             // <![CDATA[
             if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
@@ -37,38 +38,14 @@
 
         <!-- Parameter for Social wall -->
         <script type="text/javascript">
-            jQuery(document).ready(function($){
-                $('#social-stream').dcSocialStream({
-                    feeds: {
-                        twitter: {
-                            id: 'fllbenelux,#fllbnl',
-                            thumb: true,
-                            images: 'small'
-                        },
-                        facebook: {
-                            id: '121516737994223'
-                        },
-                        youtube: {
-                            id: 'Techniekpromotie'
-                        }
-                    },
-                    rotate: {
-                        delay: 0
-                    },
-                    twitterId: 'fllbenelux',
-                    control: false,
-                    filter: false,
-                    wall: true,
-                    cache: false,
-                    max: 'limit',
-                    limit: 10,
-                    iconPath: 'images/dcsns-dark/',
-                    imagePath: 'images/dcsns-dark/',
-                    height: 500
-                });          
+
+            $(document).ready(function($){
+                loadSocial('social-stream');
+                refreshSocial('social-stream', 60000);
+                initCounter('counter', 60000);
             });
 
-            var refresh_rate = 60000
+            /*var refresh_rate = 60000
             var auto_refresh = setInterval(function(){
                 $('#counter').removeData();
                 $('#counter').empty();
@@ -76,87 +53,65 @@
 
                 $('#social-stream').removeData();
                 $('#social-stream').empty();
-                $('#social-stream').fadeOut('fast').load(
-                    $('#social-stream').dcSocialStream({
-                        feeds: {
-                            twitter: {
-                                id: 'fllbenelux,#fllbnl,@fllbenelux',
-                                thumb: true,
-                                images: 'small'
-                            },
-                            facebook: {
-                                id: '121516737994223'
-                            },
-                            youtube: {
-                                id: 'Techniekpromotie'
-                            }
-                        },
-                        rotate: {
-                            delay: 0
-                        },
-                        twitterId: 'fllbenelux',
-                        control: false,
-                        filter: false,
-                        wall: true,
-                        cache: false,
-                        max: 'limit',
-                        limit: 10,
-                        iconPath: 'images/dcsns-dark/',
-                        imagePath: 'images/dcsns-dark/',
-                        height: 500
-                    })
-                ).fadeIn('fast');
-            }, refresh_rate);
+                $('#social-stream')
+                    .fadeOut('fast')
+                    .load(
+                        loadSocial()
+                    )
+                    .fadeIn('fast');
+            }, refresh_rate);*/
         </script>
 
         <!--Counter -->
         <script type="text/javascript">
-            var auto_refresh = setInterval(function(){
+            /*var auto_refresh = setInterval(function(){
                 $('#counter').html($('#counter').text()-1)
-            },1000);
+            },1000);*/
         </script>
          
         <!-- Local mods for Styles -->
         <style type="text/css">
-        h3 {
-            margin-left: 10px;
-        }
-        #player {
-            background-color:#fff;
-            margin-left:10px;
-            width:660px;
-            height: 417px;
-            -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
-            -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
-            box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
-        }
-        #logos {
-            left:10px;
-            top: 465px;
-            width:660px;
-            height:85px;
-            margin-left:10px;
-            margin-top:5px;
-            background-color:#fff;
-            -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
-            -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
-            box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
-        }
-        #wall {
-            margin-top: 10px;
-            margin-left: 680px;
-            width:494px;
-            height:507px;
-            overflow-y:scroll;
-            overflow-x:hidden;
-            background-color:#fff;
-            -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
-            -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
-            box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
-        }
-        .center-text {
-            text-align: center;
-        }
+            h3 {
+                margin-left: 10px;
+            }
+            #player {
+                background-color:#fff;
+                margin-left:10px;
+                width:660px;
+                height: 417px;
+                -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
+                -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
+                box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
+            }
+            #logos {
+                left:10px;
+                top: 465px;
+                width:660px;
+                height:85px;
+                margin-left:10px;
+                margin-top:5px;
+                background-color:#fff;
+                -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
+                -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
+                box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
+            }
+            #wall {
+                margin-top: 10px;
+                margin-left: 680px;
+                width:494px;
+                height:507px;
+                overflow-y:scroll;
+                overflow-x:hidden;
+                background-color:#fff;
+                -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
+                -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
+                box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.6);
+                padding-top: 0px;
+
+            }
+            .center-text {
+                text-align: center;
+            }
         </style>
     </head>
 <body>
