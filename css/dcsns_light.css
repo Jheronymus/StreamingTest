@@ -9,11 +9,11 @@
 /* Main styles */
 /* Feeds */
 .dcsns {
-	background: #555 url(../images/noize.png) repeat;
+	background: #E5E5E5;
     border-radius: 7px;
 	-webkit-border-radius: 7px; 
 	-moz-border-radius: 7px; 
-    color: #F0F0F0;
+    color: #444;
     list-style: none outside none;
     margin: 0;
     padding: 10px 10px 0;
@@ -28,7 +28,7 @@
 	-moz-border-radius: 5px; 
 }
 .dcsns-loading {
-	background: url(../images/loading_dark.gif) no-repeat 0 0;
+	background: url(../images/loading_light.gif) no-repeat 0 0;
 	height: 24px;
 	padding: 6px 0 0 30px;
 	position: absolute;
@@ -40,15 +40,15 @@
 	padding: 0;
 }
 .stream li a {
-	color: #9BDFE4;
+	color: #2DB6E8;
 }
 .stream li {
 	padding: 0;
 	position: relative;
     font-size: 11px;
-	color: #fff;
-	background: #333 url(../images/noize.png) repeat;
-    border: 1px solid #292929;
+	color: #444;
+	background: #fff;
+    border: 1px solid #D3D3D3;
 	border-radius: 5px; 
 	-webkit-border-radius: 5px; 
 	-moz-border-radius: 5px;
@@ -65,8 +65,9 @@
 .stream li .icon {
 	position: absolute;
 	left: 8px;
-	bottom: 2px;
+	bottom: 5px;
 	z-index: 2;
+	height: 20px;
 }
 .stream li .clear {
 	clear: both;
@@ -98,10 +99,10 @@
 	color: #f0f0f0;
 }
 .stream li .section-title a {
-	color: #FCFBEA;
+	color: #555;
 }
 .stream li .section-title a:hover {
-	color: #9BDFE4;
+	color: #2DB6E8;
 }
 .stream li .section-thumb {
 	float: left;
@@ -109,7 +110,7 @@
 	max-width: 99%;
 }
 .stream li .section-thumb img {
-	border: 1px solid #222;
+	border: 1px solid #ccc;
 	padding: 1px;
 	background: #fff;
 	max-width: 99%;
@@ -286,7 +287,6 @@
 }
 .dcsns .filter li img {
 	margin: 0;
-	padding: 1px;
 	height: 22px;
 }
 /* Controls */
@@ -308,7 +308,7 @@
 	height: 22px;
 	float: left;
 	margin: 0 0 0 2px;
-	background: url(../images/controls1.png) no-repeat 0 0;
+	background: url(../images/controls.png) no-repeat 0 0;
 }
 .dcsns .controls .prev {
 	background-position: -44px 0;
@@ -420,7 +420,7 @@
 	max-width: 99%;
 }
 .stream li.dcsns-twitter a {
-	color: #4EC2DC;
+	color: #38AEAE;
 }
 .stream li.dcsns-twitter .section-intro a, .stream li.dcsns-twitter .section-intro a:hover {
 	color: #fff;
@@ -433,7 +433,7 @@
 	text-decoration: underline;
 }
 .stream li.dcsns-twitter a:hover {
-	color: #4EC2DC;
+	color: #38AEAE;
 	text-decoration: underline;
 }
 .stream li.dcsns-twitter .twitter-user {
@@ -449,10 +449,10 @@
 	text-decoration: none;
 }
 .stream li.dcsns-twitter .twitter-user a strong{
-	color: #fff;
+	color: #444;
 }
 .stream li.dcsns-twitter .twitter-user a:hover strong {
-	color: #4EC2DC;
+	color: #38AEAE;
 	text-decoration: underline;
 }
 /* google */
@@ -526,11 +526,11 @@
 	clear: both;
 }
 .stream li.dcsns-instagram .section-thumb img {
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 .stream li.dcsns-instagram .section-meta {
 	clear: both;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 .stream li.dcsns-instagram .section-meta .meta .comments, .stream li.dcsns-instagram .section-meta .meta .likes {
 	margin: 0 0 5px 0;
