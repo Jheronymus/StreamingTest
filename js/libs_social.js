@@ -35,8 +35,7 @@ function loadSocial( container ) {
         limit: 10,
         iconPath: 'images/dcsns-dark/',
         imagePath: 'images/dcsns-dark/',
-        height: 500,
-        debug: true
+        height: 500
     });          
 }
 
@@ -53,15 +52,6 @@ function refreshSocial( container, interval ) {
         $('#social-stream').empty();
         $('#social-stream').fadeOut('fast').load( loadSocial( container ))
             .fadeIn('fast');
-
-        /*$('#social-stream').removeData(); // why this?
-        $('#social-stream').empty(); // empty before fadeOut?
-        $('#social-stream')
-            .fadeOut('fast')
-            .load(
-                loadSocial()
-            )
-            .fadeIn('fast');*/
     }, interval);
 }
 
