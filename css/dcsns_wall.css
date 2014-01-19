@@ -13,6 +13,13 @@
     list-style: none outside none;
     margin: 0;
 }
+.dcsns h1 {
+    width: auto;
+	position: relative;
+}
+.dcsns h1, .dcsns h2, .dcsns h3 {
+    line-height: 1.35em;
+}
 .dcsns-content {
 	position: relative;
 	padding: 0;
@@ -26,7 +33,7 @@
 	left: 10px;
 }
 .dcsns-toolbar .dcsns-loading {
-	right: 2px;
+	right: 10px;
 	left: auto;
 }
 .stream p {
@@ -36,15 +43,13 @@
 .stream li a {
 	color: #2DB6E8;
 }
-
-
 .stream li {
 	background-color: #FFFFFF;
-	-webkit-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-	-moz-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5);
     font-size: 11px;
-    padding: 15px 0 45px 0;
+    padding: 15px 0 35px 0;
     width: 224px;
 	position: relative;
 	margin: 0 12px 12px 0;
@@ -106,9 +111,10 @@
 }
 .stream li .section-text {
 	display: block;
+	margin-bottom: 3px;
 }
 .stream li .section-text br {
-	display: none;
+	display: block;
 }
 .stream li .section-user {
 	clear: both;
@@ -219,6 +225,12 @@
 .stream li .section-share a.share-favorite {
 	background-position: 0 -64px;
 }
+.stream li .section-share a.share-google {
+	background-position: 0 -80px;
+}
+.stream li .section-share a.share-linkedin {
+	background-position: 0 -96px;
+}
 .stream li .section-share a.share-facebook:hover {
 	background-position: -16px 0;
 }
@@ -234,6 +246,12 @@
 .stream li .section-share a.share-favorite:hover {
 	background-position: -16px -64px;
 }
+.stream li .section-share a.share-google:hover {
+	background-position: -16px -80px;
+}
+.stream li .section-share a.share-linkedin:hover {
+	background-position: -16px -96px;
+}
 /* Toolbar */
 .dcsns-toolbar {
 	padding: 0;
@@ -243,14 +261,14 @@
 }
 /* Filter */
 #wall {
-	padding-top: 0px;
+	padding-top: 15px;
 }
 #wall .dcsns-toolbar {
-	margin-bottom: 0px;
+	margin-bottom: 25px;
 }
 .dcsns-toolbar .filter {
 	padding: 0;
-	margin: 0 0 2px 0;
+	margin: 0 0 15px 0;
 }
 .dcsns-toolbar .filter li {
 	display: inline;
@@ -267,7 +285,7 @@
 }
 .dcsns-toolbar .filter li a {
 	padding: 4px 3px 0 3px;
-	margin: 0 1px 0 0;
+	margin: 0 1px 1px 0;
 	display: block;
 	float: left;
 	background: #777;
@@ -380,6 +398,7 @@
 	border: 1px solid #ddd;
 	padding: 1px;
 	background: #fff;
+	max-width: 192px;
 }
 .stream li.dcsns-facebook .section-text a {
 	margin-right: 4px;
@@ -403,21 +422,76 @@
 	display: none;
 }
 /* twitter */
+.stream li.dcsns-twitter .section-thumb {
+	margin-top: 3px;
+}
+.stream li.dcsns-twitter .section-thumb img {
+	width: 48px; 
+	height: 48px;
+}
+.stream li.dcsns-twitter .section-user {
+	padding: 0;
+	background: none;
+}
 .stream li.dcsns-twitter .section-text img {
 	margin: 5px 0 0;
 	border: 1px solid #ddd;
 	padding: 1px;
 	background: #fff;
+	max-width: 192px;
+}
+.stream li.dcsns-twitter a {
+	color: #38AEAE;
+}
+.stream li.dcsns-twitter .section-intro a, .stream li.dcsns-twitter .section-intro a:hover {
+	color: #fff;
+}
+.stream li.dcsns-twitter .section-intro span a {
+	text-decoration: none;
+	margin-left: 0;
+}
+.stream li.dcsns-twitter .section-intro span a:hover {
+	text-decoration: underline;
+}
+.stream li.dcsns-twitter a:hover {
+	color: #38AEAE;
+	text-decoration: underline;
+}
+.stream li.dcsns-twitter .twitter-user {
+	margin-bottom: 2px;
+	display: block;
+}
+.stream li.dcsns-twitter .twitter-user a {
+	color: #999;
+	line-height: 1.35em;
+}
+.stream li.dcsns-twitter .twitter-user a:hover {
+	color: #999;
+	text-decoration: none;
+}
+.stream li.dcsns-twitter .twitter-user a strong{
+	color: #444;
+}
+.stream li.dcsns-twitter .twitter-user a:hover strong {
+	color: #38AEAE;
+	text-decoration: underline;
 }
 /* google */
 .stream li.dcsns-google .section-title {
 	margin-bottom: 5px;
 }
 .dcsns .stream li.dcsns-google .section-thumb img {
-	max-width: 190px;
+	max-width: 192px;
 }
 .stream li.dcsns-google .meta span.plusones {
 	padding-left: 0;
+}
+/* rss */
+.stream li.dcsns-rss .section-text img {
+	border: 1px solid #ddd;
+	padding: 1px;
+	background: #fff;
+	max-width: 192px;
 }
 /* stumbleupon */
 .dcsns .stream li.dcsns-stumbleupon .section-title {
@@ -425,11 +499,15 @@
 	clear: both;
 }
 .dcsns .stream li.dcsns-stumbleupon .section-thumb img {
-	max-width: 190px;
+	max-width: 192px;
+}
+/* youtube */
+.stream li.dcsns-youtube .section-thumb img {
+	max-width: 192px;
 }
 /* vimeo */
 .stream li.dcsns-vimeo .section-thumb img {
-	max-width: 190px;
+	max-width: 192px;
 }
 .dcsns .stream li.dcsns-vimeo .section-title {
 	display: block;
@@ -444,12 +522,12 @@
 .stream li.dcsns-vimeo .logo {
 	margin-bottom: 3px;
 }
-/** Flickr **/
+/* Flickr */
 .stream li.dcsns-flickr .section-thumb {
 	margin: 0;
 }
 .stream li.dcsns-flickr .section-thumb img{
-	height: 70px;
+	max-width: 192px;
 }
 /* Pinterest */
 .stream li.dcsns-pinterest .section-thumb {
@@ -464,7 +542,7 @@
 /* dribbble */
 .stream li.dcsns-dribbble .inner img {
 	margin-bottom: 5px;
-	max-width: 190px;
+	max-width: 192px;
 }
 /* lastfm */
 .stream li.dcsns-lastfm .section-title {
@@ -478,7 +556,7 @@
 	float: none;
 }
 .stream li.dcsns-deviantart .section-thumb img {
-	width: 190px;
+	max-width: 192px;
 }
 /* tumblr */
 .stream li.dcsns-tumblr .section-text img {
@@ -487,7 +565,7 @@
 	border: 1px solid #ddd;
 	padding: 1px;
 	background: #fff;
-	max-width: 190px;
+	max-width: 192px;
 }
 .stream li.dcsns-tumblr .track {
 	display: block;
@@ -509,7 +587,7 @@
 	border: 1px solid #ddd;
 	padding: 1px;
 	background: #fff;
-	max-width: 190px;
+	max-width: 192px;
 }
 .stream li.dcsns-instagram .meta {
 	clear: both;
